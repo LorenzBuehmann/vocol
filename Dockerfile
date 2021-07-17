@@ -24,7 +24,7 @@ RUN  apt-get update -yq \
 # Build application
 RUN mkdir /home/project
 WORKDIR /home/project
-RUN git clone  https://github.com/vocol/vocol.git \
+RUN git clone  -b fuseki-4.1.0 https://github.com/LorenzBuehmann/vocol.git \
 &&  chmod u+x  .
 WORKDIR /home/project/vocol
 RUN npm install
